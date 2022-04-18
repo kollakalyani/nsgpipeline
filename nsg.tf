@@ -34,3 +34,12 @@ resource "azurerm_network_security_group" "example"{
     environment = "dev"
   }
 }
+
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "storg"
+    storage_account_name = "mun"
+    container_name       = "container1"
+    key                  = "pJLAzfvUJdT5vHw9KTPo6tPiD9OcL4OC5SYQ2jhjiaNSLZfbkgfHr0ewPm/26OqmKUseKUxqFpJL+AStag8LkA=="
+  }
+}
